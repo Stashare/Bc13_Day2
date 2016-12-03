@@ -2,9 +2,12 @@
 
 def find_missing(a,b):
 
-    temparr=[]
-    outputarr=[0]
+    temparr=[] #an array that stores missing numbers temporarily during the loop 
+               #and it is assigned to outputarr.
     
+    outputarr=[0] #output the final result
+    
+    #loop to check whether there is missing numbers
     for i in b:
         if i not in a:
             temparr.append(i)
@@ -12,7 +15,7 @@ def find_missing(a,b):
         
     print outputarr
 
-find_missing([], [])
+find_missing([], [])#A call to the find_missing function,passing arrays as parameters
 
 
 
