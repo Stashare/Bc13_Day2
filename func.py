@@ -1,14 +1,13 @@
-#Counts the occurrences or characters in a word
+"""Counts the occurrences or characters in a word"""
 
 def sentence(statement):
 
-    statement = " ".join(statement.split())
+    statement = " ".join(statement.split())#to get rid of \t,\n and whitespaces
 
-    print statement
     
     wordcount={}
-    
-    for word in statement.split():
+    #a loop for counting all words in the statement
+    for word in statement:
         if word not in wordcount:
             wordcount[word] = 1
         else:
