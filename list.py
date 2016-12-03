@@ -1,3 +1,4 @@
+"""MaxMin application"""
 def minMax(numbersList):
 
     outputlist=[]
