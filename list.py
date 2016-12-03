@@ -18,4 +18,29 @@ def minMax(numbersList):
 
 minMax([4,4,4,4])
 
+"""Google Books API to list all books about java."""
+
+import pprint
+import sys
+from apiclient.discovery import build
+
+# the API key is provided as a command-line argument.
+api_key = sys.argv[1]
+
+
+service = build('books', 'v1', developerKey=api_key)
+
+
+request = service.volumes().list(source='public', q='java')
+
+response = request.execute()
+pprint.pprint(response)
+
+
+print 'Found %d books:' % len(response['items'])
+for book in response.get('items', []):
+  print 'Title: %s, Authors: %s' % (
+    book['volumeInfo']['title'],
+    book['volumeInfo']['authors'])
+
 
