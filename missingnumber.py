@@ -16,6 +16,7 @@ def find_missing(a,b):
     print outputarr
 
 find_missing([], [])#A call to the find_missing function,passing arrays as parameters
+                    #the output should be [0]
 
 
 
